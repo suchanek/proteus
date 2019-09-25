@@ -112,6 +112,8 @@ venv.bak/
 *.exe
 *.o
 *.so
+*.dcm
+
 
 # Packages #
 ############
