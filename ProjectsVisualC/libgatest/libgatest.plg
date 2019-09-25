@@ -1,0 +1,251 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: libgatest - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "c:\windows\TEMP\RSP1282.TMP" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/libgatest.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ  /c 
+"F:\tmp\libga100\libga100\pool.c"
+"F:\tmp\libga100\libga100\config.c"
+"F:\tmp\libga100\libga100\cross.c"
+"F:\tmp\libga100\libga100\function.c"
+"F:\tmp\libga100\libga100\ga.c"
+"F:\tmp\libga100\libga100\mutate.c"
+"F:\tmp\libga100\libga100\chrom.c"
+"F:\tmp\libga100\libga100\replace.c"
+"F:\tmp\libga100\libga100\report.c"
+"F:\tmp\libga100\libga100\select.c"
+"F:\tmp\libga100\libga100\ga-test.c"
+]
+Creating command line "cl.exe @c:\windows\TEMP\RSP1282.TMP" 
+Creating temporary file "c:\windows\TEMP\RSP1283.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:yes /pdb:"Debug/libgatest.pdb" /debug /machine:I386 /out:"Debug/libgatest.exe" /pdbtype:sept 
+.\Debug\pool.obj
+.\Debug\config.obj
+.\Debug\cross.obj
+.\Debug\function.obj
+.\Debug\ga.obj
+.\Debug\mutate.obj
+.\Debug\chrom.obj
+.\Debug\replace.obj
+.\Debug\report.obj
+.\Debug\select.obj
+".\Debug\ga-test.obj"
+]
+Creating command line "link.exe @c:\windows\TEMP\RSP1283.TMP"
+<h3>Output Window</h3>
+Compiling...
+pool.c
+f:\tmp\libga100\libga100\pool.c(57) : warning C4013: 'PL_reset' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\pool.c(74) : warning C4013: 'PL_valid' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\pool.c(78) : warning C4013: 'PL_clean' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\pool.c(99) : warning C4033: 'PL_free' must return a value
+f:\tmp\libga100\libga100\pool.c(149) : warning C4013: 'CH_valid' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\pool.c(150) : warning C4013: 'CH_reset' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\pool.c(179) : warning C4013: 'CF_valid' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\pool.c(270) : warning C4013: 'PL_read' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\pool.c(298) : warning C4013: 'PL_rand' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\pool.c(313) : warning C4013: 'PL_stats' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\pool.c(340) : warning C4013: 'CH_resize' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\pool.c(356) : warning C4013: 'CH_free' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\pool.c(364) : warning C4033: 'PL_read' must return a value
+f:\tmp\libga100\libga100\pool.c(372) : warning C4013: 'PL_append' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\pool.c(424) : warning C4013: 'random' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\pool.c(519) : warning C4018: '<' : signed/unsigned mismatch
+f:\tmp\libga100\libga100\pool.c(627) : warning C4244: '+=' : conversion from 'double ' to 'float ', possible loss of data
+f:\tmp\libga100\libga100\pool.c(674) : warning C4244: '=' : conversion from 'double ' to 'float ', possible loss of data
+f:\tmp\libga100\libga100\pool.c(688) : warning C4244: '*=' : conversion from 'double ' to 'float ', possible loss of data
+f:\tmp\libga100\libga100\pool.c(704) : warning C4244: '=' : conversion from 'double ' to 'float ', possible loss of data
+f:\tmp\libga100\libga100\pool.c(732) : warning C4013: 'PL_remove' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\pool.c(748) : warning C4013: 'PL_insert' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\pool.c(775) : warning C4013: 'CH_copy' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\pool.c(880) : warning C4113: 'int (__cdecl *)()' differs in parameter lists from 'int (__cdecl *)(const void *,const void *)'
+f:\tmp\libga100\libga100\pool.c(882) : warning C4113: 'int (__cdecl *)()' differs in parameter lists from 'int (__cdecl *)(const void *,const void *)'
+config.c
+f:\tmp\libga100\libga100\pool.c(167) : warning C4716: 'PL_reset' : must return a value
+f:\tmp\libga100\libga100\pool.c(374) : warning C4716: 'PL_read' : must return a value
+f:\tmp\libga100\libga100\pool.c(463) : warning C4716: 'PL_rand' : must return a value
+f:\tmp\libga100\libga100\pool.c(586) : warning C4715: 'PL_stats' : not all control paths return a value
+f:\tmp\libga100\libga100\pool.c(733) : warning C4716: 'PL_clean' : must return a value
+f:\tmp\libga100\libga100\pool.c(750) : warning C4716: 'PL_append' : must return a value
+f:\tmp\libga100\libga100\pool.c(781) : warning C4716: 'PL_insert' : must return a value
+f:\tmp\libga100\libga100\pool.c(797) : warning C4716: 'PL_remove' : must return a value
+f:\tmp\libga100\libga100\config.c(41) : warning C4013: 'CF_reset' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\config.c(53) : warning C4013: 'CF_valid' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\config.c(53) : warning C4033: 'CF_free' must return a value
+f:\tmp\libga100\libga100\config.c(56) : warning C4013: 'PL_free' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\config.c(61) : warning C4013: 'CH_free' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\config.c(106) : warning C4305: '=' : truncation from 'const double ' to 'float '
+f:\tmp\libga100\libga100\config.c(117) : warning C4013: 'SE_select' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\config.c(118) : warning C4013: 'X_select' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\config.c(119) : warning C4013: 'MU_select' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\config.c(120) : warning C4013: 'RE_select' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\config.c(121) : warning C4013: 'GA_select' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\config.c(131) : warning C4013: 'PL_valid' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\config.c(131) : warning C4013: 'PL_reset' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\config.c(135) : warning C4013: 'CH_valid' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\config.c(135) : warning C4013: 'CH_reset' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\config.c(182) : warning C4013: 'strcmp' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\config.c(357) : warning C4013: 'strcpy' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\config.c(444) : warning C4013: 'getpid' undefined; assuming extern returning int
+f:\tmp\libga100\libga100\config.c(520) : warning C4013: 'strlen' undefined; assuming extern returning int
+cross.c
+f:\tmp\libga100\libga100\config.c(136) : warning C4716: 'CF_reset' : must return a value
+f:\tmp\libga100\libga100\config.c(509) : warning C4715: 'CF_read' : not all control paths return a value
+F:\tmp\libga100\libga100\cross.c(71) : warning C4013: 'FN_set_fun' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\cross.c(81) : warning C4013: 'FN_select' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\cross.c(102) : warning C4013: 'X_init_kids' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\cross.c(105) : warning C4013: 'random' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\cross.c(106) : warning C4013: 'CH_copy' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\cross.c(150) : warning C4013: 'X_gen_xp' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\cross.c(161) : warning C4018: '<' : signed/unsigned mismatch
+F:\tmp\libga100\libga100\cross.c(139) : warning C4101: 'tmp' : unreferenced local variable
+F:\tmp\libga100\libga100\cross.c(189) : warning C4018: '<' : signed/unsigned mismatch
+F:\tmp\libga100\libga100\cross.c(232) : warning C4013: 'X_gen_2_xp' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\cross.c(251) : warning C4013: 'X_map' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\cross.c(296) : warning C4013: 'X_gen_4_xp' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\cross.c(492) : warning C4101: 'k' : unreferenced local variable
+F:\tmp\libga100\libga100\cross.c(596) : warning C4018: '<' : signed/unsigned mismatch
+F:\tmp\libga100\libga100\cross.c(601) : warning C4018: '<' : signed/unsigned mismatch
+F:\tmp\libga100\libga100\cross.c(605) : warning C4018: '<' : signed/unsigned mismatch
+F:\tmp\libga100\libga100\cross.c(612) : warning C4018: '<' : signed/unsigned mismatch
+F:\tmp\libga100\libga100\cross.c(615) : warning C4018: '<' : signed/unsigned mismatch
+F:\tmp\libga100\libga100\cross.c(623) : warning C4018: '<' : signed/unsigned mismatch
+F:\tmp\libga100\libga100\cross.c(626) : warning C4018: '<' : signed/unsigned mismatch
+F:\tmp\libga100\libga100\cross.c(557) : warning C4101: 'length' : unreferenced local variable
+F:\tmp\libga100\libga100\cross.c(648) : warning C4013: 'CF_valid' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\cross.c(649) : warning C4013: 'CH_valid' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\cross.c(683) : warning C4013: 'X_do_asex' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\cross.c(800) : warning C4013: 'CH_reset' undefined; assuming extern returning int
+function.c
+F:\tmp\libga100\libga100\cross.c(121) : warning C4715: 'X_fun' : not all control paths return a value
+F:\tmp\libga100\libga100\cross.c(633) : warning C4716: 'X_uox' : must return a value
+F:\tmp\libga100\libga100\cross.c(731) : warning C4716: 'X_gen_xp' : must return a value
+F:\tmp\libga100\libga100\cross.c(752) : warning C4716: 'X_gen_2_xp' : must return a value
+F:\tmp\libga100\libga100\cross.c(784) : warning C4716: 'X_gen_4_xp' : must return a value
+F:\tmp\libga100\libga100\cross.c(806) : warning C4716: 'X_init_kids' : must return a value
+F:\tmp\libga100\libga100\function.c(25) : warning C4013: 'CF_valid' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\function.c(35) : warning C4013: 'strlen' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\function.c(42) : warning C4013: 'strcpy' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\function.c(69) : warning C4013: 'strncmp' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\function.c(77) : warning C4033: 'FN_select' must return a value
+F:\tmp\libga100\libga100\function.c(90) : warning C4033: 'FN_select' must return a value
+ga.c
+F:\tmp\libga100\libga100\ga.c(55) : warning C4013: 'FN_set_fun' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(65) : warning C4013: 'FN_select' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(95) : warning C4013: 'CF_read' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(110) : warning C4013: 'CF_valid' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(116) : warning C4013: 'CF_reset' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(133) : warning C4013: 'CF_verify' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(136) : warning C4013: 'RP_config' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(139) : warning C4013: 'srandom' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(157) : warning C4013: 'GA_gen_init' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(168) : warning C4013: 'GA_init_trial' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(171) : warning C4013: 'GA_gap' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(175) : warning C4013: 'GA_trial' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(179) : warning C4013: 'RP_report' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(188) : warning C4013: 'RP_final' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(191) : warning C4013: 'CH_free' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(209) : warning C4013: 'PL_valid' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(220) : warning C4013: 'PL_generate' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(229) : warning C4013: 'PL_append' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(236) : warning C4013: 'CH_valid' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(241) : warning C4013: 'CH_copy' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(302) : warning C4013: 'GA_ss_init' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(343) : warning C4013: 'PL_free' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(401) : warning C4013: 'CH_verify' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(405) : warning C4013: 'X_fun' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(408) : warning C4013: 'MU_fun' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(420) : warning C4013: 'RE_fun' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(423) : warning C4013: 'GA_cum' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga.c(426) : warning C4013: 'PL_stats' undefined; assuming extern returning int
+mutate.c
+F:\tmp\libga100\libga100\ga.c(256) : warning C4716: 'GA_gen_init' : must return a value
+F:\tmp\libga100\libga100\ga.c(383) : warning C4716: 'GA_ss_init' : must return a value
+F:\tmp\libga100\libga100\ga.c(427) : warning C4716: 'GA_trial' : must return a value
+F:\tmp\libga100\libga100\ga.c(450) : warning C4716: 'GA_cum' : must return a value
+F:\tmp\libga100\libga100\mutate.c(46) : warning C4013: 'FN_set_fun' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\mutate.c(56) : warning C4013: 'FN_select' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\mutate.c(76) : warning C4013: 'random' undefined; assuming extern returning int
+chrom.c
+F:\tmp\libga100\libga100\mutate.c(100) : warning C4716: 'MU_simple_invert' : must return a value
+F:\tmp\libga100\libga100\mutate.c(116) : warning C4716: 'MU_simple_random' : must return a value
+F:\tmp\libga100\libga100\mutate.c(136) : warning C4716: 'MU_swap' : must return a value
+F:\tmp\libga100\libga100\chrom.c(43) : warning C4013: 'CH_reset' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\chrom.c(59) : warning C4013: 'CH_valid' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\chrom.c(78) : warning C4033: 'CH_free' must return a value
+F:\tmp\libga100\libga100\chrom.c(156) : warning C4013: 'memcpy' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\chrom.c(225) : warning C4013: 'CF_valid' undefined; assuming extern returning int
+replace.c
+F:\tmp\libga100\libga100\chrom.c(135) : warning C4716: 'CH_reset' : must return a value
+F:\tmp\libga100\libga100\replace.c(50) : warning C4013: 'FN_set_fun' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\replace.c(60) : warning C4013: 'FN_select' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\replace.c(91) : warning C4013: 'RE_pick_best' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\replace.c(108) : warning C4013: 'CF_valid' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\replace.c(109) : warning C4013: 'PL_valid' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\replace.c(110) : warning C4013: 'CH_valid' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\replace.c(119) : warning C4013: 'PL_append' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\replace.c(144) : warning C4013: 'strcmp' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\replace.c(148) : warning C4013: 'RE_do_by_rank' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\replace.c(181) : warning C4013: 'CH_cmp' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\replace.c(182) : warning C4013: 'PL_insert' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\replace.c(271) : warning C4013: 'PL_swap' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\replace.c(259) : warning C4101: 'med' : unreferenced local variable
+F:\tmp\libga100\libga100\replace.c(259) : warning C4101: 'max' : unreferenced local variable
+F:\tmp\libga100\libga100\replace.c(259) : warning C4101: 'min' : unreferenced local variable
+F:\tmp\libga100\libga100\replace.c(290) : warning C4013: 'CH_copy' undefined; assuming extern returning int
+report.c
+F:\tmp\libga100\libga100\replace.c(121) : warning C4716: 'RE_append' : must return a value
+F:\tmp\libga100\libga100\replace.c(150) : warning C4716: 'RE_by_rank' : must return a value
+F:\tmp\libga100\libga100\replace.c(192) : warning C4716: 'RE_first_weaker' : must return a value
+F:\tmp\libga100\libga100\replace.c(245) : warning C4716: 'RE_weakest' : must return a value
+F:\tmp\libga100\libga100\replace.c(321) : warning C4716: 'RE_pick_best' : must return a value
+F:\tmp\libga100\libga100\report.c(24) : warning C4013: 'CF_valid' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\report.c(25) : warning C4013: 'PL_valid' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\report.c(28) : warning C4013: 'RP_time' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\report.c(28) : warning C4033: 'RP_report' must return a value
+F:\tmp\libga100\libga100\report.c(34) : warning C4013: 'RP_short' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\report.c(36) : warning C4013: 'RP_long' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\report.c(58) : warning C4013: 'CF_report' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\report.c(76) : warning C4033: 'RP_final' must return a value
+select.c
+F:\tmp\libga100\libga100\report.c(153) : warning C4716: 'RP_short' : must return a value
+F:\tmp\libga100\libga100\select.c(46) : warning C4013: 'FN_set_fun' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\select.c(56) : warning C4013: 'FN_select' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\select.c(78) : warning C4013: 'CF_valid' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\select.c(103) : warning C4013: 'random' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\select.c(117) : warning C4013: 'PL_update_ptf' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\select.c(120) : warning C4013: 'SE_min_roulette' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\select.c(122) : warning C4013: 'SE_max_roulette' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\select.c(139) : warning C4244: '=' : conversion from 'double ' to 'float ', possible loss of data
+F:\tmp\libga100\libga100\select.c(143) : warning C4244: '+=' : conversion from 'double ' to 'float ', possible loss of data
+F:\tmp\libga100\libga100\select.c(163) : warning C4244: '=' : conversion from 'double ' to 'float ', possible loss of data
+F:\tmp\libga100\libga100\select.c(187) : warning C4013: 'PL_sort' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\select.c(190) : warning C4013: 'strcmp' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\select.c(195) : warning C4244: 'return' : conversion from 'double ' to 'int ', possible loss of data
+ga-test.c
+F:\tmp\libga100\libga100\ga-test.c(24) : warning C4013: 'X_select' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga-test.c(28) : warning C4013: 'GA_run' undefined; assuming extern returning int
+F:\tmp\libga100\libga100\ga-test.c(61) : warning C4244: '=' : conversion from 'double ' to 'int ', possible loss of data
+F:\tmp\libga100\libga100\ga-test.c(69) : warning C4716: 'obj_fun' : must return a value
+Linking...
+pool.obj : error LNK2001: unresolved external symbol _random
+cross.obj : error LNK2001: unresolved external symbol _random
+mutate.obj : error LNK2001: unresolved external symbol _random
+select.obj : error LNK2001: unresolved external symbol _random
+ga.obj : error LNK2001: unresolved external symbol _srandom
+Debug/libgatest.exe : fatal error LNK1120: 2 unresolved externals
+Error executing link.exe.
+
+
+
+<h3>Results</h3>
+libgatest.exe - 6 error(s), 182 warning(s)
+</pre>
+</body>
+</html>

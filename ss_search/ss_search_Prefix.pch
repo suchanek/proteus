@@ -1,0 +1,5 @@
+//
+// Prefix header for all source files of the 'ss_search' target in the 'ss_search' project.
+//
+
+#include <Carbon/Carbon.h>

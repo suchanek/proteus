@@ -1,0 +1,406 @@
+@database pdb2pov.guide
+
+@Master pdb2pov.texinfo
+
+@Width 72
+
+
+This is the AmigaGuide® file pdb2pov.guide, produced by Makeinfo-1.49 from 
+the input file pdb2pov.texinfo.
+
+    This file documents pdb2pov, a program to convert PDB format atomic
+structures to `POV-Ray' v2.0 format scene files on the Commodore Amiga
+computer.
+
+    Copyright (C) 1992, 1993 Eric G. Suchanek, Ph.D.
+
+    Permission is granted to make and distribute verbatim copies of
+this manual provided the copyright notice and this permission notice
+are preserved on all copies.
+
+    Permission is granted to copy and distribute modified versions of
+this manual under the conditions for verbatim copying, provided that
+the entire resulting derived work is distributed under the terms of a
+permission notice identical to this one.
+
+    Permission is granted to copy and distribute translations of this
+manual into another language, under the above conditions for modified
+versions, except that this permission notice may be stated in a
+translation approved by me.
+
+
+@Node Main "pdb2pov.guide"
+@Next "Legal"
+
+pdb2pov
+*******
+
+    This document describes pdb2pov, a program written by Eric G.
+Suchanek, Ph.D. The program has been designed to allow the user to
+quickly and easily convert Brookhaven data bank format files to
+`POV-Ray' v2.0 format scene files on the Amiga personal computer.  The
+program has a wide variety of options which can be used to produce some
+stunning images. This program is used primarily by my program `CPK',
+but may be used as a stand-alone application.
+
+
+ @{" Legal " Link "Legal"} 
+ @{" Purpose " Link "Purpose"} 
+ @{" Miscellaneous " Link "Miscellaneous"} 
+ @{" Concepts " Link "Concepts"} 
+
+
+@EndNode
+
+@Node "Legal" "pdb2pov.guide/Legal"
+@Next "Purpose"
+@Prev "Main"
+@Toc "Main"
+
+Legal/Disclaimer
+****************
+
+    You may distribute this program freely as long as it is not "For
+Profit", and as long as all files in the distribution remain intact.
+Fred Fish is expressly given permission to distribute this code in his
+disk collection.
+
+    This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. Use at your own
+risk!
+
+    I consider this program to be `CharityWare'. If you like it, please
+consider sending a donation to the National SIDS foundation. You can
+read more about SIDS in the About.SIDS document included in this
+distribution.
+
+
+@EndNode
+
+@Node "Purpose" "pdb2pov.guide/Purpose"
+@Next "Miscellaneous"
+@Prev "Legal"
+@Toc "Main"
+
+Program Description
+*******************
+
+    PDB2POV is a CLI program designed to convert Brookhaven format
+atomic structure files into POV-Ray Version 2.0 compatible scene files.
+The program has a large number of options to change the atomic
+rendering style for CPK, van der Waals, or covalent radii spheres.  The
+user may also specify two ground styles (plain or checkerboard), area
+light sources, and a nice cloudy sky.  Finally, the user may specify
+for X, Y, and Z axis rotations to orient the molecule.
+
+    The molecular format used is called `Protein Data Bank' (.pdb)
+format. This is one of the most prevalent formats used in modern
+chemistry. The entire Protein Data Bank consists of a few hundred
+protein and DNA molecular structures and can be obtained from the
+Brookhaven laboratories for a nominal fee (or from me if you know what
+you want).
+
+    This program was designed to be used with my molecular rendering
+program CPK, but may be used manually as well.
+
+
+ @{" Distribution " Link "Distribution"} 
+ @{" Requirements " Link "Requirements"} 
+ @{" Installation " Link "Installation"} 
+ @{" Usage " Link "Usage"} 
+
+
+@EndNode
+
+@Node "Distribution" "pdb2pov.guide/Distribution"
+@Next "Requirements"
+@Toc "Purpose"
+
+Distribution
+============
+
+    In addition to the program, this distribution includes a number of
+atomic 'include' files to be used with the generated scene files.
+
+You should have received:
+
+   * `pdb2pov.000' - 68000 optimized version (IEEE math)
+
+   * `pdb2pov.030' - 68030 optimized version (IEEE math)
+
+   * `pdb2pov.040' - 68040 optimized version (68882 math)
+
+   * `Pdb2POV.dvi|guide' - this file
+
+   * `About.Sids' - documentation about the SIDS foundation
+
+   * `crambin.pdb' - a small protein molecule
+
+   * `crambin.pov' - `POV-Ray' V2.x scene file from crambin.pdb
+
+   * `atoms2.inc' - main atom include file (shiny plastic)
+
+   * `atoms_covalent.inc' - covalent atomic radii include file
+
+   * `atoms_cpk.inc' - CPK radii atomic include file
+
+   * `atoms_vdw.inc' - van der Waals radii atomic include file
+
+   * `atoms_glass2.inc' - atom definitions with 'glass' texture
+
+   * `babel' - a program to convert atomic format files
+
+   * `babel.doc' - documentation for the `babel' program
+
+   * `#?.lis' - additional files for the `babel' program
+
+
+@EndNode
+
+@Node "Requirements" "pdb2pov.guide/Requirements"
+@Next "Installation"
+@Prev "Distribution"
+@Toc "Purpose"
+
+Requirements for running `pdb2pov'
+==================================
+
+    This program should run on any Amiga.  There are no operating
+system specific calls, so I wouldn't be surprised if it runs under
+`v1.3'.  I have not tested this, however.  The program uses dynamic
+memory allocation to read the atomic structures, and should gracefully
+exit if it runs out of memory.  I would recommend at least 1MB RAM
+memory in order to read relatively large structure files.
+
+    You will, of course, need a copy of `POV-Ray' version 2.0 or higher.
+This is an excellent public domain ray-tracer which may be found on a
+number of BBS and internet sites.
+
+*NOTE:* I have customized `POV-Ray' to be slightly more compatible with
+the current version of CPK. My version also has direct support for the
+Picasso II RTG 24 bit graphics board.  This version is available on
+aminet and BIX.  The name will be `povami_picasso_xx.lha', where xx
+represents an internal version number.
+
+
+@EndNode
+
+@Node "Installation" "pdb2pov.guide/Installation"
+@Next "Usage"
+@Prev "Requirements"
+@Toc "Purpose"
+
+Installation
+============
+
+  1. Drag the `pdb2pov' drawer to some appropriate location on your
+     system.
+
+  2. Copy all files from the include directory to your normal `POV-Ray'
+     include area.
+
+
+@EndNode
+
+@Node "Usage" "pdb2pov.guide/Usage"
+@Prev "Installation"
+@Toc "Purpose"
+
+Usage
+=====
+
+    If you just type the program name with no arguments you should see
+a USAGE message something like:
+
+     Program: $Id: pdb2pov.040 1.19 1994/7/19 22:00 eric Exp eric $
+     
+     USAGE: pdb2pov.040 InputFile OutputFile
+             [-o object_only]
+             [-t atm file format]
+             [-p (no sky or ground)]
+             [-s (writes cloudy sky)]
+             [-g (writes plain ground)]
+             [-h (writes checkered ground)]
+             [-a (create area light)]
+             [-v (do van der Waals radii)]
+             [-c (do covalent radii)]
+             [-b (do ball_and_stick)]
+             [-d (bond cutoff threshold)]
+             [-q (ball and stick + glass atoms)]
+             [-x X-Axis rotation]
+             [-y Y-Axis rotation]
+             [-z Z-Axis rotation]
+     
+              Author: Eric G. Suchanek, Ph.D.
+
+The options are as follows:
+
+   * -o - Only write the object definition with no ground or sky
+
+   * -t - Read the input format in Tripos .atm format rather than the
+     default Brookhaven pdb format
+
+   * -p - Don't generate any sky or ground at all
+
+   * -s - Generate statements for a nice cloudy sky background
+
+   * -g - Generate statements for a bumpy dark purple 'plain' ground
+
+   * -h - Generate statements for the classic checked ground
+
+   * -a - Generate statements for an `area light' light source. These
+     produce soft shadows but can take a very long time to render.
+
+   * -v - Render the scene with van der Waals atomic radii
+
+   * -c - Render the scene with covalent atomic radii
+
+   * -b - Render the scene in ball and stick mode
+
+   * -d - Specify the distance (Angstroms) above which bonds will not
+     be generated for ball and stick mode.
+
+   * -q - Generate a hybrid molecule with ball and stick atoms overlaid
+     with glass spheres.  This looks really good, but takes an
+     extremely long time to render.
+
+   * -x - Specify an X-Axis rotation angle (degrees).
+
+   * -y - Specify a Y-Axis rotation angle (degrees).
+
+   * -z - Specify a Z-Axis rotation angle (degrees).
+
+    The *InputFile* and *OutputFile* parameters are assumed to have
+extensions of `.pdb' and `.pov', respectively, so don't specify any
+extensions on the command line.
+
+Here's an example:
+
+       pdb2pov.040 crambin crambin -s -h -x 90 -b -d 1.8
+
+    This would take `crambin.pdb' to `crambin.pov', generate sky and
+checkered ground, rotate the molecule 90 degress in the X axis, and
+generate ball and stick mode with a distance cutoff of 1.8 Angstroms.
+
+    The program tries to be intelligent about positioning the molecule
+so that the whole structure is within the field of view, but you're
+naturally free to adjust the position by hand for more aesthetic
+results if you wish.
+
+    You may also use the atomic radii flags (`-v -c') to get different
+effects.  By using the `-v' flag you'll get van der Waals radii
+spheres, and `-c' will use covalent radii.  The default is to use
+approximate CPK radii.
+
+    Finally, a note about *ball and stick mode*.  The program uses a
+bond distance cutoff of 2.0 angstroms for computing bonds.  That is,
+any distance greater than this will not be considered a bond.  If you
+find yourself getting lots of spurious bonds try decreasing this value.
+ The default is generally reasonable for 'typical' atomic structures,
+though.
+
+    If the program can't recognize a specific atom type it will use the
+parameters for `carbon'.  You may therefore need to edit the scene file
+or add to `atoms2.inc', `atoms_glass2.inc' and the radii files. If you
+update these files please send me a copy.
+
+
+@EndNode
+
+@Node "Miscellaneous" "pdb2pov.guide/Miscellaneous"
+@Next "Concepts"
+@Prev "Purpose"
+@Toc "Main"
+
+Miscellaneous
+*************
+
+The Brookhaven data bank
+========================
+
+    The Brookhaven data bank is one of the principal repositories for
+protein and nucleic acid crystallographic structures.  The lab
+maintains an anonymous FTP site at: `pdb.pdb.bnl.gov', (130.199.144.1).
+ This site has the current structure database as well as a number of
+useful programs. Brookhaven also distributes a quarterly CD-ROM with
+the latest database. Send E-Mail to `pdb@chm.bnl.gov' for ordering
+information.
+
+
+ @{" Babel " Link "Babel"} 
+ @{" History " Link "History"} 
+
+
+@EndNode
+
+@Node "Babel" "pdb2pov.guide/Babel"
+@Next "History"
+@Toc "Miscellaneous"
+
+Babel
+=====
+
+    Many people have requested the capability of reading and converting
+more than just `PDB' files from `pdb2pov'.  However, adding a good
+assortment of molecular file filters is not trivial. I am now including
+the program `Babel' with this distribution.  `Babel' was written by Pat
+Walters and Matt Stahl; the program can read and write a wide variety
+of atomic structure file formats. For more information on `Babel' see
+the file `Babel.doc'.
+
+
+ @{" History " Link "History"} 
+
+
+@EndNode
+
+@Node "History" "pdb2pov.guide/History"
+@Prev "Babel"
+@Toc "Miscellaneous"
+
+History
+=======
+
+   * V1.19 - Added the -p flag for plain sky, (white) with no ground at
+     all.
+
+   * V1.18 - Some minor radii changes, now includes correct `babel'
+     include files. Also changed so that the 68000 and 68030 versions
+     use the IEEE library. Only the '040 version uses the math
+     coprocessor.
+
+   * V1.17 - Minor bug fix in 68000 version.  Wasn't calculating the
+     bond table correctly. March, 1994.
+
+   * V1.16 - Added ball and stick mode. January, 1994
+
+   * V1.15 - First public release, December 1993
+
+
+@EndNode
+
+@Node "Concepts" "pdb2pov.guide/Concepts"
+@Prev "Miscellaneous"
+@Toc "Main"
+
+Concepts
+********
+
+    This section contains a list of general topics (or *concepts* in
+Texinfo parlance) derived from this document.
+
+
+
+ @{" Babel program " Link "Babel"}                        Babel
+ @{" Brookhaven data bank " Link "Miscellaneous"}                 Miscellaneous
+ @{" Description " Link "Purpose"}                          Purpose
+ @{" Distribution " Link "Distribution"}                         Distribution
+ @{" Installing pdb2pov " Link "Installation"}                   Installation
+ @{" Program function " Link "Purpose"}                     Purpose
+ @{" History " Link "History"}				History
+ @{" System Requirements " Link "Requirements"}                  Requirements
+ @{" Using pdb2pov " Link "Usage"}                        Usage
+
+@EndNode
+

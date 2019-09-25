@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+   <META NAME="GENERATOR" CONTENT="Mozilla/4.01 [en] (Win95; I) [Netscape]">
+   <META NAME="Author" CONTENT="Eric G. Suchanek">
+   <TITLE>pdb2pov Usage</TITLE>
+</HEAD>
+<BODY TEXT="#000000" BGCOLOR="#FFFFC0" LINK="#0000FF" VLINK="#800080" ALINK="#FF00FF">
+
+<H1>
+pdb2pov Usage</H1>
+
+<PRE>
+&nbsp;&nbsp;&nbsp; If you just type the program name with no arguments you should see
+a USAGE message something like:
+
+&nbsp;&nbsp;&nbsp;&nbsp; Program: $Id: pdb2pov 1.23 1997/7/1 22:00 eric Exp eric $
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp; USAGE: pdb2pov InputFile OutputFile
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [-o object_only]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [-t atm file format]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [-p (no sky or ground)]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [-s (writes cloudy sky)]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [-g (writes plain ground)]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [-h (writes checkered ground)]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [-a (create area light)]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [-v (do van der Waals radii)]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [-c (do covalent radii)]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [-b (do ball_and_stick)]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [-d (bond cutoff threshold)]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [-q (ball and stick + glass atoms)]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [-x X-Axis rotation]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [-y Y-Axis rotation]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [-z Z-Axis rotation]
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Author: Eric G. Suchanek, Ph.D.
+
+The options are as follows:
+
+&nbsp;&nbsp; * -o - Only write the object definition with no ground or sky
+
+&nbsp;&nbsp; * -t - Read the input format in Tripos .atm format rather than the
+&nbsp;&nbsp;&nbsp;&nbsp; default Brookhaven pdb format
+
+&nbsp;&nbsp; * -p - Don't generate any sky or ground at all
+
+&nbsp;&nbsp; * -s - Generate statements for a nice cloudy sky background
+
+&nbsp;&nbsp; * -g - Generate statements for a bumpy dark purple 'plain' ground
+
+&nbsp;&nbsp; * -h - Generate statements for the classic checked ground
+
+&nbsp;&nbsp; * -a - Generate statements for an `area light' light source. These
+&nbsp;&nbsp;&nbsp;&nbsp; produce soft shadows but can take a very long time to render.
+
+&nbsp;&nbsp; * -v - Render the scene with van der Waals atomic radii
+
+&nbsp;&nbsp; * -c - Render the scene with covalent atomic radii
+
+&nbsp;&nbsp; * -b - Render the scene in ball and stick mode
+
+&nbsp;&nbsp; * -d - Specify the distance (Angstroms) above which bonds will not
+&nbsp;&nbsp;&nbsp;&nbsp; be generated for ball and stick mode.
+
+&nbsp;&nbsp; * -q - Generate a hybrid molecule with ball and stick atoms overlaid
+&nbsp;&nbsp;&nbsp;&nbsp; with glass spheres.&nbsp; This looks really good, but takes an
+&nbsp;&nbsp;&nbsp;&nbsp; extremely long time to render.
+
+&nbsp;&nbsp; * -x - Specify an X-Axis rotation angle (degrees).
+
+&nbsp;&nbsp; * -y - Specify a Y-Axis rotation angle (degrees).
+
+&nbsp;&nbsp; * -z - Specify a Z-Axis rotation angle (degrees).
+
+&nbsp;&nbsp;&nbsp; The *InputFile* and *OutputFile* parameters are assumed to have
+extensions of `.pdb' and `.pov', respectively, so don't specify any
+extensions on the command line.
+
+Here's an example:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pdb2pov crambin crambin -s -h -x 90 -b -d 1.8
+
+&nbsp;&nbsp;&nbsp; This would take `crambin.pdb' to `crambin.pov', generate sky and
+checkered ground, rotate the molecule 90 degress in the X axis, and
+generate ball and stick mode with a distance cutoff of 1.8 Angstroms.
+
+&nbsp;&nbsp;&nbsp; The program tries to be intelligent about positioning the molecule
+so that the whole structure is within the field of view, but you're
+naturally free to adjust the position by hand for more aesthetic
+results if you wish.
+
+&nbsp;&nbsp;&nbsp; You may also use the atomic radii flags (`-v -c') to get different
+effects.&nbsp; By using the `-v' flag you'll get van der Waals radii
+spheres, and `-c' will use covalent radii.&nbsp; The default is to use
+approximate CPK radii.
+
+&nbsp;&nbsp;&nbsp; Finally, a note about *ball and stick mode*.&nbsp; The program uses a
+bond distance cutoff of 1.8 angstroms for computing bonds.&nbsp; That is,
+any distance greater than this will not be considered a bond.&nbsp; If you
+find yourself getting lots of spurious bonds try decreasing this value.
+&nbsp;The default is generally reasonable for 'typical' atomic structures,
+though.
+
+&nbsp;&nbsp;&nbsp; If the program can't recognize a specific atom type it will use the
+parameters for <B>carbon</B>.&nbsp; You may therefore need to edit the scene file
+or add to `atoms2.inc', `atoms_glass2.inc' and the radii files. If you
+update these files please send me a copy.</PRE>
+
+<HR>&nbsp;[<A HREF="pdb2pov.html">Back</A>] [<A HREF="../index.html">Eric's
+Web O' Plenty</A>]
+</BODY>
+</HTML>

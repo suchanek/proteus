@@ -1,0 +1,39 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: pdb2pov - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "c:\windows\TEMP\RSP3A2.TMP" with contents
+[
+/nologo /ML /W3 /GX /D "NDEBUG" /D "WIN32" /D "_CONSOLE DOS" /FR".\Release/" /Fp".\Release/pdb2pov.pch" /YX /Fo".\Release/" /Fd".\Release/" /FD /c 
+"D:\EGS\ProjectsVisualC\pdb2pov\pdb2pov_type.c"
+]
+Creating command line "cl.exe @c:\windows\TEMP\RSP3A2.TMP" 
+Creating temporary file "c:\windows\TEMP\RSP03A3.TMP" with contents
+[
+kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:".\Release/pdb2pov.pdb" /machine:I386 /out:".\Release/pdb2pov.exe" 
+.\Release\matrix.obj
+.\Release\pdb2pov.obj
+.\Release\pdb2pov_bonds.obj
+.\Release\pdb2pov_mol.obj
+.\Release\pdb2pov_output.obj
+.\Release\pdb2pov_type.obj
+.\Release\pdb2povio.obj
+.\Release\util.obj
+]
+Creating command line "link.exe @c:\windows\TEMP\RSP03A3.TMP"
+<h3>Output Window</h3>
+Compiling...
+pdb2pov_type.c
+Linking...
+
+
+
+<h3>Results</h3>
+pdb2pov.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
