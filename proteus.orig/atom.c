@@ -25,9 +25,6 @@
 
 static char rcsid[] = "$Id: atom.c,v 2.3 1995/06/22 20:37:41 suchanek Exp $";
 
-
-
-
 #include "protutil.h"
 #include "atom.h"
 
